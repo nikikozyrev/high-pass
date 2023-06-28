@@ -1,0 +1,364 @@
+.projects {
+  border-top: 80px solid transparent;
+  margin-top: -80px;
+
+  &__container {
+    padding-top: 69px;
+    padding-bottom: 54px;
+  }
+
+  &__caption {
+    margin-bottom: 11px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 30px;
+    margin: 0 auto;
+  }
+
+  &__elem {
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  &__elem1 {
+    background-image: url(images/projects-1.jpg);
+    grid-column: span 4;
+  }
+
+  &__elem2 {
+    background-image: url(images/projects-2.jpg);
+    grid-column: span 4;
+  }
+
+  &__elem3 {
+    background-image: url(images/projects-3.jpg);
+    grid-column: span 4;
+  }
+
+  &__elem4 {
+    background-image: url(images/projects-4.jpg);
+    grid-column: span 12;
+  }
+
+  &__elem5 {
+    background-image: url(images/projects-5.jpg);
+    grid-column: span 12;
+  }
+
+  &__elem6 {
+    background-image: url(images/projects-6.jpg);
+    grid-column: span 6;
+  }
+
+  &__elem7 {
+    background-image: url(images/projects-7.jpg);
+    grid-column: span 6;
+  }
+
+  &__small-elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  &__date {
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 22px;
+    color: $grey;
+    padding-left: 18px;
+    background-image: url(images/calendar.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+  &__descr {
+    line-height: 22px;
+    margin-bottom: 10px;
+    color: $black;
+  }
+
+  &__big-elem {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 308px 30px 30px;
+  }
+
+  &__btn {
+    margin-top: auto;
+    padding: 13px 20px;
+    background: none;
+  }
+
+  &__btn:focus-visible {
+    background-color: $brown;
+    border-color: $orange;
+  }
+
+  &__btn:hover {
+    background-color: $orange;
+    border-color: $orange;
+  }
+
+  &__btn:active {
+    background-color: $brownLow;
+    border-color: $brownLow;
+  }
+}
+
+.elem1__descr2,
+.elem2__descr2,
+.elem3__descr2 {
+  display: none;
+}
+
+.big-elem-date {
+  background-image: url(images/calendar-white.png);
+  color: $white;
+}
+
+.big-elem-descr {
+  color: $white;
+}
+
+.big-elem-caption {
+  line-height: 25px;
+}
+
+@media (max-width: 1365px) {
+  .projects {
+    &__grid {
+      max-width: 962px;
+      grid-template-rows: 285px 307px 307px;
+      gap: 24px 30px;
+    }
+
+    &__elem1 {
+      background-image: url(images/projects-1-2.jpg);
+      grid-column: span 6;
+      order: 0;
+    }
+
+    &__elem2 {
+      background-image: url(images/projects-2-2.jpg);
+      grid-column: span 6;
+      order: 1;
+    }
+
+    &__elem3 {
+      background-image: url(images/projects-3-2.jpg);
+      grid-column: span 12;
+      order: 2;
+    }
+
+    &__elem4 {
+      background-image: url(images/projects-4-2.jpg);
+      grid-column: span 15;
+      order: 3;
+    }
+
+    &__elem5 {
+      background-image: url(images/projects-5-2.jpg);
+      grid-column: span 15;
+      order: 6;
+    }
+
+    &__elem6 {
+      background-image: url(images/projects-6-2.jpg);
+      grid-column: span 9;
+      order: 4;
+    }
+
+    &__elem7 {
+      background-image: url(images/projects-7-2.jpg);
+      grid-column: span 9;
+      order: 5;
+    }
+
+    &__big-elem {
+      padding-top: 30px;
+      padding-right: 267px;
+    }
+  }
+
+  .projects__descr {
+    margin-bottom: 17px;
+  }
+
+  .elem1__descr1,
+  .elem2__descr1,
+  .elem3__descr1 {
+    display: none;
+  }
+
+  .elem1__descr2,
+  .elem2__descr2,
+  .elem3__descr2 {
+    display: block;
+  }
+}
+
+@media (max-width: 1023px) {
+  .projects {
+    border-top: 125px solid transparent;
+    margin-top: -125px;
+
+    &__grid {
+      max-width: 714px;
+      grid-template-rows: 300px 302px 307px 300px;
+      gap: 26px 30px;
+    }
+
+    &__elem1 {
+      background-image: url(images/projects-1-3.jpg);
+      grid-column: span 8;
+      order: 0;
+    }
+
+    &__elem2 {
+      background-image: url(images/projects-2-3.jpg);
+      grid-column: span 8;
+      order: 1;
+    }
+
+    &__elem3 {
+      background-image: url(images/projects-3-3.jpg);
+      grid-column: span 8;
+      order: 2;
+    }
+
+    &__elem4 {
+      background-image: url(images/projects-4-3.jpg);
+      grid-column: span 24;
+      order: 3;
+    }
+
+    &__elem5 {
+      background-image: url(images/projects-5-3.jpg);
+      grid-column: span 24;
+      order: 6;
+    }
+
+    &__elem6 {
+      background-image: url(images/projects-6-3.jpg);
+      grid-column: span 12;
+      order: 4;
+    }
+
+    &__elem7 {
+      background-image: url(images/projects-7-3.jpg);
+      grid-column: span 12;
+      order: 5;
+    }
+  }
+
+  .elem1__descr1,
+  .elem2__descr1,
+  .elem3__descr1 {
+    display: block;
+  }
+
+  .elem1__descr2,
+  .elem2__descr2,
+  .elem3__descr2 {
+    display: none;
+  }
+
+  .elem1__descr1,
+  .elem2__descr1 {
+    margin-bottom: 10px;
+  }
+
+  .elem3__descr1 {
+    margin-bottom: 31px;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects {
+    &__container {
+      padding-top: 47px;
+      padding-bottom: 14px;
+    }
+
+    &__grid {
+      grid-template-columns: 278px;
+      grid-template-rows: 300px 277px 277px 422px 300px 302px 422px;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    &__elem {
+      grid-column: span 1;
+    }
+
+    &__elem1 {
+      background-image: url(images/projects-1-4.jpg);
+    }
+
+    &__elem2 {
+      background-image: url(images/projects-2-4.jpg);
+    }
+
+    &__elem3 {
+      background-image: url(images/projects-3-4.jpg);
+    }
+
+    &__elem4 {
+      background-image: url(images/projects-4-4.jpg);
+    }
+
+    &__elem5 {
+      background-image: url(images/projects-5-4.jpg);
+
+    }
+
+    &__elem6 {
+      background-image: url(images/projects-6-4.jpg);
+    }
+
+    &__elem7 {
+      background-image: url(images/projects-7-4.jpg);
+    }
+
+    &__descr {
+      font-size: 16px;
+      margin-bottom: 11px;
+    }
+
+    &__big-elem {
+      padding: 0;
+      justify-content: end;
+      padding: 30px 30px 31px 30px;
+    }
+
+    &__btn {
+      margin: 0;
+      padding: 8px 18px;
+    }
+  }
+
+  .big-elem-descr {
+    font-size: 14px;
+    margin-bottom: 14px;
+    line-height: 18px;
+  }
+
+  .big-elem-caption {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .big-elem-date {
+    margin-bottom: 5px;
+  }
+
+  .elem3__descr1 {
+    margin-bottom: 10px;
+  }
+}

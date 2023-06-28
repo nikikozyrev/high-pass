@@ -1,0 +1,303 @@
+.header-bottom,
+.burger-close-btn {
+  display: none;
+}
+
+.header .burger-company-number {
+  display: none;
+}
+
+.header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  background-color: $black;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 26px;
+  }
+}
+
+.logo {
+  width: 190px;
+  height: 30px;
+  margin-right: 140px;
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 74px;
+}
+
+.nav__item {
+  font-family: 'TT Firs Neue';
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  color: $white;
+}
+
+.nav__link {
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.nav__link:focus-visible {
+  background-color: $brown;
+  outline: none;
+}
+
+.nav__link:hover {
+  color: $orange;
+}
+
+.nav__link:active {
+  color: $brownLow;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn svg path {
+  transition: fill .2s ease-in-out
+}
+
+.search-btn:hover svg path {
+  fill: $orange
+}
+
+.burger {
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.burger__line {
+  position: absolute;
+  background-color: $white;
+  width: 100%;
+  height: 2px;
+}
+
+.burger__line:first-child {
+  top: 0;
+  left: 0;
+}
+
+.burger__line:nth-child(2) {
+  top: 46%;
+  left: 0;
+}
+
+.burger__line:last-child {
+  left: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.search-form {
+  position: absolute;
+  top: -100px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  z-index: 40;
+  padding: 10px;
+  background: $black;
+  transition: top .2s ease-in-out;
+}
+
+.search-form__input {
+  font-family: 'TT Firs Neue';
+  font-size: 16px;
+  line-height: 21px;
+  color: $greyLow;
+  width: 283px;
+  margin-right: 12px;
+  border: none;
+  background-color: $black;
+  border-bottom: 1px solid $greyLow;
+  transition: border-color .2s ease;
+}
+
+.search-form__input[placeholder] {
+  color: $greyLow;
+}
+
+.search-form__input:focus-visible {
+  outline: none;
+  border-color: $orange;
+}
+
+.search-form__input:hover {
+  border-color: $orange;
+}
+
+.search-form__input:active {
+  border-color: $brownLow;
+}
+
+.close-btn {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form--show {
+  top: 15px;
+}
+
+@media (max-width: 1199px) {
+  .header__container {
+    padding-top: 25px;
+    padding-bottom: 26px;
+  }
+
+  .logo {
+    width: 167px;
+    height: 26px;
+    margin-right: 82px;
+  }
+
+  .nav__list {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header-bottom {
+    display: block;
+  }
+
+  .header__container-bottom {
+    padding-top: 11px;
+    padding-bottom: 13px;
+  }
+
+  .nav-top {
+    display: none;
+  }
+
+  .header-bottom {
+    background-color: $blackLow;
+  }
+
+  .nav__list {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 15px 21px;
+  }
+
+  .header__container {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  .header__container-bottom {
+    padding-top: 14px;
+    padding-bottom: 13px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .logo {
+    width: 111px;
+    height: 18px;
+  }
+
+  .search-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .search-form--show {
+    top: 11px;
+  }
+
+  .search-form {
+    right: 10px;
+    width: 95%;
+  }
+
+  .search-form__input {
+    width: 100%;
+  }
+
+  .burger-close-btn,
+  .nav-bottom {
+    display: block;
+  }
+
+  .header .burger-company-number {
+    display: block;
+  }
+
+  .nav-bottom {
+    position: absolute;
+    top: 71px;
+    left: -600px;
+    z-index: 2000;
+    width: 100%;
+    height: 100vh;
+    padding-top: 13px;
+    padding-left: 20px;
+    padding-bottom: 13px;
+    padding-right: 20px;
+    background-color: $black;
+    transition: left .3s ease;
+  }
+
+  .burger-close-btn {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .burger-close-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .nav__item {
+    font-size: 16px;
+  }
+
+  .nav-bottom--active {
+    left: 0;
+  }
+}

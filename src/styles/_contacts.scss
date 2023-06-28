@@ -1,0 +1,329 @@
+.contacts {
+  background-color: $white;
+  border-top: 80px solid transparent;
+  margin-top: -80px;
+
+  &__container {
+    padding-bottom: 70px;
+  }
+
+  &__caption {
+    margin-bottom: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__close--arrow .close__line:first-child {
+    transform: rotate(-30deg) translateX(2px) translateY(5px)
+  }
+
+  &__close--arrow .close__line:nth-child(2n) {
+    transform: rotate(30deg) translateX(2px) translateY(-5px);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    width: 32%;
+  }
+
+  &__label {
+    font-family: 'TT Firs Neue';
+    font-size: 24px;
+    line-height: 14px;
+    margin-bottom: -15px;
+    color: $black;
+  }
+
+  &__form-text {
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: -6px;
+    color: $grey;
+  }
+
+  &__input {
+    padding: 15px 23px;
+    width: 100%;
+    height: 50px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 19px;
+    color: $grey;
+    background: $greyLow;
+    border: none;
+    outline: none;
+  }
+
+  &__textarea {
+    height: 150px;
+    resize: none;
+  }
+}
+
+.map-wrap {
+  width: 66%;
+  height: 460px;
+}
+
+.map {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.adress-wrap {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 48%;
+  height: 100%;
+  transition: all .2s ease-in-out;
+}
+
+.adress {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 175px 50px 100px 60px;
+  background: rgba(32, 32, 32, 0.85);
+  transition: all .2s ease-in-out;
+}
+
+.display-none {
+  display: none;
+}
+
+.padding-none {
+  padding: 0;
+}
+
+.adress-wrap--close {
+  width: 60px;
+  height: 60px;
+}
+
+.ymaps-2-1-79-map-copyrights-promo {
+  display: none;
+}
+
+#map>ymaps>ymaps>ymaps>ymaps.ymaps-2-1-79-copyrights-pane>ymaps:nth-child(1)>ymaps {
+  display: none;
+}
+
+.ymaps-2-1-79-ground-pane {
+  filter: grayscale(100%);
+}
+
+.company-name {
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-size: 24px;
+  line-height: 22px;
+  margin-bottom: 5px;
+  color: $white;
+}
+
+.company-address {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 3px;
+  color: $greyMedium;
+}
+
+.company-number {
+  display: block;
+  font-family: 'TT Firs Neue';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 22px;
+  color: $orange;
+  background-image: url(images/phone.png);
+  background-repeat: no-repeat;
+}
+
+.form-group {
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: 2px;
+  left: 23px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: $orange;
+}
+
+.just-validate-error-field {
+  outline: 1px solid $orange;
+}
+
+.input {
+  transition: border-color .2s ease, color .2s ease;
+}
+
+.input.input::placeholder {
+  transition: color .2s ease;
+}
+
+.input:focus-visible {
+  outline: none;
+  border: 1px solid $orange;
+}
+
+.input:hover.input::placeholder {
+  color: $orange;
+}
+
+.input:active {
+  border: none;
+}
+
+@media (max-width: 1199px) {
+  .map-wrap {
+    width: 62%;
+  }
+
+  .contacts {
+    &__form {
+      width: 36%;
+    }
+
+    &__close--arrow .close__line:first-child {
+      transform: rotate(-60deg) translateX(0px) translateY(1px)
+    }
+
+    &__close--arrow .close__line:nth-child(2n) {
+      transform: rotate(60deg) translateX(3px) translateY(-6px);
+    }
+  }
+
+  .adress-wrap {
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 157px;
+  }
+
+  .adress {
+    padding: 25px 200px 25px 30px;
+  }
+
+  .padding-none {
+    padding: 0;
+  }
+
+  .adress-wrap--close {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .contacts {
+    border-top: 125px solid transparent;
+    margin-top: -125px;
+
+    &__content {
+      flex-direction: column;
+    }
+
+    &__form {
+      width: 65%;
+    }
+
+    &__label {
+      margin-bottom: -12px;
+    }
+  }
+
+  .map-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__caption {
+      margin-bottom: 10px;
+    }
+
+    &__caption,
+    &__form {
+      margin-left: 20px;
+    }
+
+    &__label {
+      font-size: 18px;
+    }
+
+    &__form-text {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__form {
+      width: 278px;
+    }
+
+    &__input {
+      height: 40px;
+    }
+
+    &__textarea {
+      height: 150px;
+    }
+  }
+
+  .map-wrap {
+    height: 471px;
+  }
+
+  .adress {
+    padding: 25px 20px 25px 20px
+  }
+
+  .company-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .company-address {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+
+  .company-number {
+    background-image: url(images/phone-small.png);
+    font-size: 14px;
+    padding-left: 17px;
+  }
+}

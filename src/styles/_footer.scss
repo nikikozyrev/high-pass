@@ -1,0 +1,125 @@
+.footer {
+  background-color: $black;
+
+  &__container {
+    padding-top: 26px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__left {
+    width: 265px;
+    margin-right: -150px;
+  }
+
+  &__center {
+    width: 365px;
+  }
+
+  &__right {
+    width: 165px;
+    text-align: right;
+  }
+}
+
+.copy {
+  font-family: 'TT Firs Neue';
+  font-size: 14px;
+  line-height: 18px;
+  color: $greyLow;
+}
+
+.quote,
+.footer__right span {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 22px;
+  color: $greyMedium;
+}
+
+.social-list {
+  display: flex;
+  padding-top: 5px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link:focus-visible {
+  outline: none;
+}
+
+.social-link svg path {
+  transition: fill .2s ease;
+}
+
+.social-link:focus-visible svg path {
+  fill: $brown;
+}
+
+.social-link:hover svg path {
+  fill: $orange;
+}
+
+.social-link:active svg path {
+  fill: $brownLow;
+}
+
+@media (max-width: 1199px) {
+  .footer {
+    &__left {
+      margin-right: 47px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer {
+    &__center {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    &__container {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 11px;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+    }
+
+    &__right {
+      text-align: center;
+      padding-bottom: 29px;
+    }
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      background-color: $blackLow;
+    }
+
+    &__logo {
+      margin: 0;
+    }
+  }
+
+  .copy {
+    font-size: 10px;
+  }
+}
